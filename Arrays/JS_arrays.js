@@ -164,3 +164,29 @@ console.log(cleverProgrammer.slice());
 console.log(cleverProgrammer.slice(1, 3));
 
 console.log(cleverProgrammer.concat(fruits, 33, 44, 55));
+
+cleverProgrammer.forEach(showUp = (item, index) => console.log(`The ${item} is at the ${index} in the array`));
+
+
+//
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+let user = users.find(item => item.id == 1);
+
+console.log(user.name); // John
+
+// Splits string into an array
+let names = 'Bilbo, Gandalf, Nazgul';
+console.log(names.split(', '));
+console.log(names.split(''));
+
+// Joins array into a string
+console.log(fruits.join(', '));
+
+
+let fakeUsername = "kylewalker23@gmail.com";
+console.log(fakeUsername.split("@")[0]);
