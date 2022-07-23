@@ -65,4 +65,102 @@ arr.push(function name() {
   console.log(this);
 });
 
-arr[2](); 
+arr[2](); // ?
+
+
+//
+// let limit = parseInt(prompt("Enter the no. of values:"));
+// let sum = 0;
+// let numbersArray = [];
+// for(let i = 0; i < limit; i++) {
+//     let ask = parseInt(prompt("Enter a number"));
+//     if (ask == 0) {
+//       continue;
+//     }
+//     numbersArray.push(ask);
+//     sum += ask;
+// }
+// console.log(sum);
+
+
+// A maximal subarray
+// The input is an array of numbers, e.g. arr = [1, -2, 3, 4, -9, 6].
+// The task is: find the contiguous subarray of arr with the maximal sum of items.
+// Write the function getMaxSubSum(arr) that will return that sum.
+// let arrOfNumbers = [1, -2, 3, 4, -9, 6];
+
+
+//Find max number in an array
+function getMax(arrayOfNum) {
+  let max = arrayOfNum[0];
+  for(let k = 0; k<arrayOfNum.length; k++) {
+    if (max < arrayOfNum[k]) {
+      max = arrayOfNum[k];
+    }
+  }
+  return max;
+}
+
+console.log(getMax([1, 4, 2, 4.5]));
+
+
+//Reverse an array
+function reverseArray(array_old) {
+  let array_new = [];
+  for (let l = array_old.length - 1; l >= 0; l--) {
+    array_new.push(array_old[l]);
+  }  
+  return array_new;
+}
+
+console.log(reverseArray([2, 5, 6, 10, 3]));
+
+
+//
+function putLastToFirst(array_input) {
+  console.log(array_input);
+  for(let m = 0; m < array_input.length; m++) {
+    array_input.unshift(array_input[array_input.length - 1]);
+  }
+  return array_input;
+}
+
+// console.log(putLastToFirst([2, 5, 9]));
+
+
+//Find the number of occurences of a given number
+function noOfOccurences(duplicateNumber, array1 = [2, 2, 4, 2, 8, 9, 7, 4, 3]) {
+  let count = 0;
+  for (let n = 0; n < array1.length; n++) {
+    if (duplicateNumber === array1[n]) {
+      count++;
+    }
+  }
+  return { count };    //returning an object
+};
+
+console.log(noOfOccurences(2));
+
+
+//
+let cleverProgrammer = [1, 2, 3, 4, 5, 6];
+let cleverProgrammer_new = [];
+for(clever of cleverProgrammer) {
+  cleverProgrammer_new.push(Math.pow(clever, 2));
+}
+console.log(cleverProgrammer_new);
+
+cleverProgrammer.splice(0, 2);  //delete 2 elements from the index 0
+console.log(cleverProgrammer);
+
+//add 2 more elements from the last index
+cleverProgrammer.splice(cleverProgrammer.length, 0, 8, 9);
+console.log(cleverProgrammer);
+
+//copy of array
+console.log(cleverProgrammer.slice());
+
+//print subarray
+console.log(cleverProgrammer.slice(1, 3));
+
+console.log(cleverProgrammer.concat(fruits, 33, 44, 55));
