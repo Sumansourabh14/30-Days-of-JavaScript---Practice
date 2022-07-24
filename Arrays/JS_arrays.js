@@ -190,3 +190,22 @@ console.log(fruits.join(', '));
 
 let fakeUsername = "kylewalker23@gmail.com";
 console.log(fakeUsername.split("@")[0]);
+
+
+//Given a vector of N positive integers and an integer X. The task is to find the frequency of X in vector.
+const findFrequencyArray = [1, 1, 1 ,1 ,1];
+function findFrequency(X) {
+  let c = 0;
+  for (let i = 0; i < findFrequencyArray.length; i++) {
+    if (X === findFrequencyArray[i]) {
+      c++;
+    }
+    else {
+      console.log("Element doesn't exist.");
+      break;
+    }
+  }
+  return `Frequency of ${X} is ${c}.`;
+}
+
+console.log(findFrequency(1));
