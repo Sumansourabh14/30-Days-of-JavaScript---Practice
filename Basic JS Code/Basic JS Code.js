@@ -23,3 +23,9 @@ c = c + d;
 d = c - d;
 c = c - d;
 console.log(c, d);
+
+//
+console.log(typeof c);
+
+//
+console.log(Math.round(Math.pow(1000, 1/3)));
