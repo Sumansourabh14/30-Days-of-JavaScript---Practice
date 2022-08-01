@@ -45,15 +45,3 @@ function loremIpsum(text, times) {
 }
 
 console.log(loremIpsum("loremipsum ", 10));
-
-
-//
-function convert(number) {
-    let result = number * 79.12;
-    if (result === NaN) {
-        return "Please try again"
-    }
-    return result;
-}
-
-console.log(convert("17.11"));
